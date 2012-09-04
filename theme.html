@@ -81,13 +81,6 @@
             }
             .sidebar {
             }
-        #footer {
-            /*border-top: 1px solid #ccc;*/
-            color: #555;
-            font-size: 12px;
-            padding: 20px 0;
-            width: 650px;:
-        }
 
     /* DEFAULT CSS */
     #branding {
@@ -249,19 +242,7 @@
         .share-this-post {
             margin-top: 10px;
         }
-    .post-footer {
-        /*border-top: 1px solid #ccc;*/
-        font-size: 12px;
-        overflow: hidden;
-        padding: 10px 0;
-        text-transform: uppercase;
-    }
-        .post-footer .author {
-            float: left;
-        }
-        .post-footer .shorturl {
-            float: right;
-        }
+    
     #disqus_thread {
         border-top: 1px solid #ccc;
         padding-top: 20px;
@@ -532,13 +513,7 @@
                         </div>
                         {/block:PermalinkPage}{/block:IfShowShareThisPostLinks}
                     </div><!-- .post -->
-                {block:PermalinkPage}
-                    <div class="post-footer">
-                        <div class="author">Posted by <a href="{PostAuthorURL}">{PostAuthorName}</a></div>
-                        <div class="shorturl"><a href="{ShortURL}">&infin; Short URL</a></div>
-                    </div>
-                {/block:PermalinkPage}
-                    {block:IfDisqusShortname}{block:Permalink}
+                {block:IfDisqusShortname}{block:Permalink}
                     {block:PermalinkPagination}
                         <div id="disqus_thread"></div>
                         <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
@@ -609,10 +584,6 @@
             </div><!-- .sidebar -->
             {/block:IndexPage}
         </div><!-- #main -->
-        <div id="footer">
-            <div class="copyright">&copy; <a href="/">{Title}</a>. All Rights Reserved.</div>
-            <div class="colophon">Powered by <a href="http://tumblr.com">Tumblr</a>. <a href="http://www.tumblr.com/theme/10820">Lightweight Theme</a> by <a href="http://arturkim.com">Artur Kim</a></div>
-        </div><!-- #footer -->
     </div><!-- #wrapper -->
 
 {block:Twitter}<script type="text/javascript" src="/tweets.js"></script>{/block:Twitter}
