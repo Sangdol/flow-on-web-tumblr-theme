@@ -382,17 +382,24 @@
             float: right;
             margin-left: 20px;
         }
-            .pagination a {
-                color: #555;
-            }
-            .pagination .previous-page a {
-                background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat left -48px;
-                padding: 1px 0 1px 20px;
-            }
-            .pagination .next-page a {
-                background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat right -64px;
-                padding: 1px 20px 1px 0;
-            }
+        .pagination a {
+            color: #555;
+        }
+        .pagination .previous-page a {
+            background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat left -48px;
+            padding: 1px 0 1px 20px;
+        }
+        .pagination .next-page a {
+            background: url("http://static.tumblr.com/euguvyd/pJkl457a4/lightweight-small-icons.png") no-repeat right -64px;
+            padding: 1px 20px 1px 0;
+        }
+        .update {
+            background: #EFFCF7;
+            border: 1px solid white;
+            margin: 1em 0;
+            padding: .5em;
+            color: #28393A;
+        }
     {CustomCSS}
     </style>
 
@@ -413,8 +420,6 @@
                             {block:SubmissionsEnabled}<li class="submit"><a href="/submit" class="page">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
                             <!--<li class="mobile"><a href="/mobile">Mobile</a></li>-->
                             
-                            <li><a href="/archive">Archive</a></li>
-                            <li><a href="https://twitter.com/#!/sangdolha" target="_blank">Twitter</a></li>
                             <li class="rss"><a href="{RSS}">RSS</a></li>
                             
                         </ul>
