@@ -1,1 +1,1 @@
-The theme of my tumblr blog [Flow on Web](http://flowonweb.com).
+The theme of my tumblog [Flow on Web](http://flowonweb.com).
