@@ -88,9 +88,16 @@ a img:focus, a img:hover, a img:active { border-color: {color:Link}; }
     max-width: 600px;
 }
 #access {
-    font-size: 12px;
+    font-size: 14px;
     overflow: hidden;
-    padding: 20px 0 10px;
+    padding: 30px 0 80px 0;
+    text-align: center;
+}
+#access a {
+    text-decoration: none;
+}
+#access .menu {
+    display: inline-block;
 }
 #pages ul {
     float: left;
@@ -134,13 +141,16 @@ a img:focus, a img:hover, a img:active { border-color: {color:Link}; }
 }
 .post {
     /*border-top: 1px solid #ccc;*/
-    padding: 20px 0 60px 0px;
+    padding: 20px 0 30px 0px;
     position: relative;
 }
 
 .post-content h3 {
     font-size: 22px;
     margin-bottom: 20px;
+}
+.post-content h3 a {
+    text-decoration: none;
 }
 .post-content h4 {
     font-size: 18px;
@@ -407,6 +417,12 @@ div.right {
 <body>
     <div id="wrapper">
         <div id="header">
+            <div id="branding">
+                <h1>
+                    {block:IfHeaderImage}<a href="/"><img src="{image:Header}" alt="{Title}" /></a>{/block:IfHeaderImage}
+                    {block:IfNotHeaderImage}<a href="/">{Title}</a>{/block:IfNotHeaderImage}
+                </h1>
+            </div><!-- #branding -->
             <div id="access">
                 <div class="menu">
                     <div id="pages">
@@ -417,7 +433,7 @@ div.right {
                             {block:SubmissionsEnabled}<li class="submit"><a href="/submit" class="page">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
                             <!--<li class="mobile"><a href="/mobile">Mobile</a></li>-->
                             
-                            <li class="rss"><a href="{RSS}">RSS</a></li>
+                            <!--<li class="rss"><a href="{RSS}">RSS</a></li>-->
                             
                         </ul>
                     </div><!-- #pages -->
@@ -429,12 +445,6 @@ div.right {
                     </div>--><!-- #search -->
                 </div><!-- .menu -->
             </div><!-- #access -->
-            <div id="branding">
-                <h1>
-                    {block:IfHeaderImage}<a href="/"><img src="{image:Header}" alt="{Title}" /></a>{/block:IfHeaderImage}
-                    {block:IfNotHeaderImage}<a href="/">{Title}</a>{/block:IfNotHeaderImage}
-                </h1>
-            </div><!-- #branding -->
         </div><!-- #header -->
         <div id="main">
             <div id="container">
@@ -494,6 +504,11 @@ div.right {
                         {/block:PermalinkPage}
                         </div><!-- post-content -->
                         <div class="post-meta {block:IndexPage}right{/block:IndexPage}">
+                        {block:NoteCount}
+                            <div class="note-count">
+                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                            </div><!-- .note-count -->
+                        {/block:NoteCount}
                         {block:Date}
                             <div class="date">
                                 <a href="{Permalink}">{Month} {DayOfMonthWithZero}, {Year}</a>
@@ -506,11 +521,6 @@ div.right {
                             </div>
                         {/block:PermalinkPagination}
                         {/block:IfDisqusShortname}
-                        {block:NoteCount}
-                            <div class="note-count">
-                                <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
-                            </div><!-- .note-count -->
-                        {/block:NoteCount}
                         </div><!-- .post-meta -->
                         {block:IfShowShareThisPostLinks}{block:PermalinkPage}
                         <div class="share-this-post">
