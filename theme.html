@@ -478,14 +478,9 @@
 				<div class="menu">
 					<div id="pages">
 						<ul>
-							<!--<li><a href="/">Home</a></li>-->
 							{block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
 							{block:AskEnabled}<li class="ask"><a href="/ask" class="page">{AskLabel}</a></li>{/block:AskEnabled}
 							{block:SubmissionsEnabled}<li class="submit"><a href="/submit" class="page">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
-							<!--<li class="mobile"><a href="/mobile">Mobile</a></li>-->
-							
-							<!--<li class="rss"><a href="{RSS}">RSS</a></li>-->
-							
 						</ul>
 					</div><!-- #pages -->
 				</div><!-- .menu -->
