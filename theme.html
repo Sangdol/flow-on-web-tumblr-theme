@@ -54,11 +54,10 @@
 	tr { border-bottom: 1px solid #ccc; }
 	th, td { padding: .7em 1.25em; }
 	hr { background-color: #ccc; border: 0; color: #555; height: 1px; margin-bottom: 20px; }
-	a:link { color: #000; text-decoration: underline; } 
+	a:link { color: #000; text-decoration: underline; }
 	a:visited { color: #ababab; text-decoration: underline; }
 	a:focus, a:hover { color: #c00; text-decoration: underline; }
 	h1, h2, h3, h4, h5, h6 {  font-weight:normal; clear:both; }
-	img { border: 1px solid #ccc; }
 	a img:focus, a img:hover, a img:active { border-color: {color:Link}; }
 
 	/* STRUCTURE */
@@ -150,19 +149,19 @@
 		position: relative;
 	}
 
-	#content h2 a, 
-	#content h3 a, 
+	#content h2 a,
+	#content h3 a,
 	#content h4 a {
 		text-decoration: none;
 	}
-	#content h2 a:hover, 
-	#content h3 a:hover, 
+	#content h2 a:hover,
+	#content h3 a:hover,
 	#content h4 a:hover {
 		text-decoration: none;
 	}
 
-	#content h2 a:visited, 
-	#content h3 a:visited, 
+	#content h2 a:visited,
+	#content h3 a:visited,
 	#content h4 a:visited {
 		color: #000;
 		text-decoration: underline;
@@ -496,8 +495,8 @@
 		<div id="main">
 			<div id="container">
 				<div id="content">
-				<!-- 
-					Front page 
+				<!--
+					Front page
 				-->
 				{block:IndexPage}
 				<div id="index-page">
@@ -682,8 +681,8 @@
 					function recent_tweets(data) {
 						for (i=0; i<data.length; i++) {
 							if (i<{text:Number of Tweets}) {
-								document.getElementById("tweets").innerHTML = 
-									document.getElementById("tweets").innerHTML + 
+								document.getElementById("tweets").innerHTML =
+									document.getElementById("tweets").innerHTML +
 									'<li class="tweet">' + data[i].text + '</li>';
 							}
 						}
