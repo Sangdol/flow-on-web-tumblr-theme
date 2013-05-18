@@ -35,7 +35,7 @@
 	table, caption, tbody, tfoot, thead, tr, th, td {
 		margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
 	}
-	body { line-height: 1; border-top:0.183em solid black}
+	body { line-height: 1; }
 	ol, ul { list-style: none; }
 	blockquote, q { quotes: none; }
 	blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
@@ -44,8 +44,7 @@
 	table { border-collapse: collapse; border-spacing: 0; }
 
 	/* GLOBAL ELEMENTS */
-	body { background: {color:#343838}; }
-	body, input, textarea { color: #000; font: 100% "Helvetica Neue", Helvetica, Arial, NanumGothic, 나눔고딕, "Malgun Gothic", "맑은 고딕", AppleGothic, Gulim, 굴림 }
+	body, input, textarea { color: #232323; font: 100% "Helvetica Neue", Helvetica, Arial, NanumGothic, 나눔고딕, "Malgun Gothic", "맑은 고딕", AppleGothic, Gulim, 굴림; background: #f5f5f5; }
 	p, ul, ol, dd, pre { margin-bottom: 20px; }
 	pre, code { font-size: 75%; line-height: 1.6; }
 	blockquote { border-left: 5px solid #ddd; color: #555; font-style: italic; margin: 0 0 20px; padding: 0 0 0 10px; }
@@ -62,8 +61,6 @@
 
 	/* STRUCTURE */
 	#wrapper {
-		background: #fff;
-		border: 10px solid {color:Border};
 		margin: 20px auto;
 		padding: 20px 50px;
 		width: 650px;
@@ -74,15 +71,17 @@
 		{block:IfNotHeaderImage}padding: 30px 0;{/block:IfNotHeaderImage}
 		text-align: center;
 	}
+
 	#branding h1 a {
-		color: #000;
+		color: #454545;
 		font-size: 250%;
-		font-weight: bold;
 		text-decoration: none;
 	}
+
 	#branding h1 a:focus, #header h1 a:hover, #header h1 a:active {
 		color: {color:Link};
 	}
+
 	#branding img {
 		max-width: 600px;
 	}
@@ -101,7 +100,7 @@
 	}
 	#pages li {
 		float: left;
-		margin-right: 10px;
+		margin: 0 5px 0 5px;
 		padding: 3px 0;
 	}
 	#pages li.rss {
@@ -163,7 +162,7 @@
 	#content h2 a:visited,
 	#content h3 a:visited,
 	#content h4 a:visited {
-		color: #000;
+		color: #454545;
 		text-decoration: underline;
 	}
 
@@ -188,6 +187,7 @@
 	}
 	.post-type-text .post-content ul {
 		padding-left: 30px;
+		line-height: 150%;
 	}
 	.post-type-text .post-content ul ul {
 		margin-bottom: 0;
@@ -200,6 +200,7 @@
 	}
 	.post-type-text .post-content ol {
 		padding-left: 30px;
+		line-height: 150%;
 	}
 	.post-type-text .post-content ol ol {
 		margin-bottom: 0;
