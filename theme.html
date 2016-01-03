@@ -498,6 +498,19 @@
        half as far down as the superscript moved up */
     bottom: -0.25em;
   }
+
+  .mobile-only {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .desktop-only {
+      display: none;
+    }
+    .mobile-only {
+      display: inline-block;
+    }
+  }
   </style>
   <style type="text/css" media="screen">
   {CustomCSS}
@@ -542,7 +555,7 @@
                   <li>
                     <span><a href="{Permalink}">{Title}</a></span>
                     <span class="right">
-                      <span class="date">
+                      <span class="date desktop-only">
                       {block:Date}{Month} {DayOfMonthWithZero}, {Year}{/block:Date}
                       </span>
                     </span>
