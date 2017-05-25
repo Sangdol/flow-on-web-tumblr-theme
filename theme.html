@@ -513,6 +513,35 @@
     .mobile-only {
       display: inline-block;
     }
+    #migration-noti {
+      left: 100px;
+      width: 600px;
+      font-size: 24px;
+      height: 50px;
+      line-height: 50px;
+    }
+    .migration-noti-url {
+      display: none;
+    }
+  }
+  #migration-noti {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 30px;
+    background-color: #4aa1ea;
+    color: #fff !important;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+  }
+  #migration-noti a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  #migration-noti a:visited {
+    color: #fff !important;
   }
   </style>
   <style type="text/css" media="screen">
@@ -522,6 +551,9 @@
   <script src="http://static.tumblr.com/euguvyd/4Dsl43n9o/jcarousellite.min.js" type="text/javascript"></script>
 </head>
 <body>
+  <div id="migration-noti">
+    <a href="https://sangdol.github.io/blog/">블로그를 이전하였습니다. <span class="migration-noti-url">sangdol.github.io/blog</span></a>
+  </div>
   <div id="wrapper">
     <div id="header">
       <div id="branding">
